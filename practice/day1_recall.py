@@ -138,11 +138,135 @@ print(skills[-1])
 # for key,value in student.items():
 #     print(key,value)
 
-numbers = [1, 2, 2, 3, 3, 3]
-number={}
+# numbers = [1, 2, 2, 3, 3, 3]
+# number={}
 
+# for i in numbers:
+#     if i in number:
+#         number[i]+=1
+#     else:
+#         number[i]=1
+        
+# print (number)
+
+# word="banana"
+# letter={}
+# for i in word:
+#     if i in letter:
+#         letter[i]+=1
+#     else:
+#         letter[i]=1
+# print (letter)
+
+
+#Part 5 — Sets
+# numbers = {1, 2, 3}
+# numbers.add(4)
+# print(numbers)
+# value =3 
+# if value in numbers:
+#     print(True)
+
+#detect Dublicate
+# numbers = [1, 5, 3, 7, 3, 9]
+# seen=set()
+# for i in numbers:
+#     if i in seen:
+#         print(f'{i} is dublicated')
+#     else :
+#         seen.add(i)
+# print(seen)
+
+# common
+# list1 = [1, 2, 3, 4, 5]
+# list2 = [4, 5, 6, 7]
+# list3=[]
+# for i in list1:
+#     for j in list2:
+#         if i==j:
+#             list3.append(j)
+# print(list3)
+
+
+# Task 28 — FizzBuzz
+# for i in range(1,30+1):
+#     if i %3 ==0 and i%5==0:
+#         print("FIzzBuzz")
+#     elif i%5==0:
+#         print("Buzz")
+#     elif i%3==0 :
+#         print("Fizz")
+#     else:
+#         print(i)
+
+# Task 29 — Second largest number
+# numbers = [12, 35, 35, 1, 10, 34, 1]
+# largest=0
+# second_largest=0
+# for i in numbers:
+#     if i>largest:
+#         second_largest=largest
+#         largest=i
+#         print(f'largest={largest}')
+#         print(f'Second largest={second_largest}')
+#     elif i >second_largest and i!=largest:
+#         second_largest=i
+# print(second_largest)
+
+
+# Task 30 — Missing number
+# numbers = [1, 2, 4, 5, 7]
+# for i in range(1,8):
+#     if i not in numbers:
+#         print(i)
+
+
+
+# Task 31 — Two Sum
+# numbers = [2, 7, 11, 15]
+# target = 9
+
+# for i in range(len(numbers)):
+#     for j in range(i+1,len(numbers)):
+#         if numbers[i]+numbers[j]==target:
+#             print(numbers[i],numbers[j])
+
+
+# Task 32 — Move zeros
+
+# numbers = [0, 1, 0, 3, 12]
+
+# result = []
+
+# for i in numbers:
+#     if i != 0:
+#         result.append(i)
+
+# for i in numbers:
+#     if i == 0:
+#         result.append(i)
+
+# print(result)
+
+
+# Task 33 — Most frequent number
+numbers = [1, 3, 3, 2, 1, 3, 4, 3]
+count={}
 for i in numbers:
-    if i in numbers:
-        number[i]+=1
+    if i in count:
+        count[i]+=1 # this means increase the value by one that is stored in key i
     else:
-        number[i]=1
+        count[i]=1 # this means count[i] is the key comes from i stored in it and 1 is value because its a first time we saw that number.
+print (count)
+
+# The 3 inside the brackets is always the key.
+
+# count[3] as a whole means the value connected to key 3.
+
+most_frequent=None
+highest_numbers=0
+for key,value in count.items():
+    if value>highest_numbers:
+        highest_numbers=value
+        most_frequent=key
+print(most_frequent,highest_numbers)
