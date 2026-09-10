@@ -270,3 +270,14 @@ for key,value in count.items():
         highest_numbers=value
         most_frequent=key
 print(most_frequent,highest_numbers)
+
+
+# Task 34 — First duplicate
+numbers = [2, 1, 3, 5, 3, 2]
+seen=set()
+for i in numbers:
+    if i in seen:
+        print(f'{i} is first dublicate')
+        break
+    else:
+        seen.add(i)
